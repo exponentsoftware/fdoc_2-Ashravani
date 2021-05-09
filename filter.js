@@ -47,3 +47,25 @@ const users = [
         return users.scores>85;
     })
     console.log(scoreGreater);
+    function addUser(users,username){
+        const{length}=users;
+        const found =users.some(el=>el.name===username);
+        if(!found) users.push({name:username});
+        return users;
+    }
+    console.log(addUser(users,'jim'));
+    function addUserSkill(users,userskill){
+        const{length}=users;
+        const found =users.some(el=>el.skills===userskill);
+        if(!found) users.push({skills:userskill});
+        return users;
+        }
+    console.log(addUserSkill(users,['html','css']));
+    function editUser(users,edituser){
+        const{length}=users;
+        const found =users.some(el=>el.name===edituser);
+        if(!found) users.push({name:edituser});
+        return users;
+        }
+    console.log(editUser(users,'chan'));
+
